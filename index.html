@@ -2,6 +2,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+  <!-- Primary Meta Tags -->
+  <title>Thumbs-up Checkbox</title>
+  <meta name="title" content="Thumbs-up Checkbox">
+  <meta name="description" content="Click on the checkbox of your DREAMS">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thumbs.guilhermecabral.net/">
+  <meta property="og:title" content="Thumbs-up Checkbox">
+  <meta property="og:description" content="Click on the checkbox of your DREAMS">
+  <meta property="og:image" content="https://thumbs.guilhermecabral.net/images/meta.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://thumbs.guilhermecabral.net/">
+  <meta property="twitter:title" content="Thumbs-up Checkbox">
+  <meta property="twitter:description" content="Click on the checkbox of your DREAMS">
+  <meta property="twitter:image" content="https://thumbs.guilhermecabral.net/images/meta.jpg">
+
+  <title>Thumbs-up Checkbox</title>
   <style>
     /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
@@ -58,11 +81,6 @@
       border-spacing: 0;
     }
 
-    * {
-      color: #444;
-      font-family: Helvetica, "Helvetica Neue", sans-serif;
-    }
-       
     body {
       background: whitesmoke;
     }
@@ -91,6 +109,9 @@
       min-width: 63px;
       text-align: center;
       user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .label {
@@ -98,17 +119,7 @@
       margin-left: 20px;
       min-width: 340px;
       user-select: none;
-    }
-
-    .bottom {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .bottom a:link, .bottom a:visited, .bottom a:hover, a:active {
-      color: #444;
+      font-family: Helvetica, "Helvetica Neue", sans-serif;
     }
 
     @media screen and (max-width: 768px) {
@@ -146,9 +157,6 @@
       I'm not checked
     </div>
   </div>
-</div>
-<div class="bottom">
-  <a href="https://guilhermecabral.net" rel="noopener noreferrer" target="_blank">guilhermecabral.net</a>
 </div>
 </body>
 <script>
