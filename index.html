@@ -1,0 +1,174 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      color: #444;
+      font-family: Helvetica, "Helvetica Neue", sans-serif;
+    }
+
+    /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    body {
+      background: whitesmoke;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .checkbox-container {
+      margin: auto;
+      font-family: Helvetica, "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .checkbox {
+      font-size: 3rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      min-height: 63px;
+      min-width: 63px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .label {
+      font-size: 3rem;
+      margin-left: 20px;
+      min-width: 340px;
+      user-select: none;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bottom a:link, .bottom a:visited, .bottom a:hover, a:active {
+      color: #444;
+    }
+
+    @media screen and (max-width: 768px) {
+      .checkbox {
+        font-size: 2rem;
+        min-height: 42px;
+        min-width: 42px;
+      }
+
+      .label {
+        font-size: 2rem;
+        min-width: 225px;
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      .checkbox {
+        font-size: 1.5rem;
+        min-height: 32px;
+        min-width: 32px;
+      }
+
+      .label {
+        font-size: 1.5rem;
+        min-width: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="checkbox-container">
+    <div class="checkbox"></div>
+    <div class="label">
+      I'm not checked
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <a href="https://guilhermecabral.net" rel="noopener noreferrer" target="_blank">guilhermecabral.net</a>
+</div>
+</body>
+<script>
+  window.onload = onLoad()
+
+  function onLoad() {
+    let checked = false
+    const checkboxContainer = document.querySelector('.checkbox-container')
+    checkboxContainer.addEventListener('click', function () {
+      checked = !checked
+      updateCheckbox(checked)
+    })
+  }
+
+  function updateCheckbox(checked) {
+    const checkbox = document.querySelector('.checkbox')
+    const label = document.querySelector('.label')
+    if (checked) {
+      checkbox.innerHTML = '👍'
+      label.innerHTML = 'I\'m checked!'
+    } else {
+      checkbox.innerHTML = ' '
+      label.innerHTML = 'I\'m not checked'
+    }
+
+
+  }
+</script>
+</html>
